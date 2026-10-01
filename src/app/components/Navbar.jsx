@@ -21,16 +21,16 @@ export default function Navbar() {
 
     const links = <>
         <li>
-            <Link href="#">Features</Link>
+            <Link href="/services">Services</Link>
         </li>
         <li>
-            <Link href="#" className="font-medium text-accent" aria-current="page">
-                Dashboard
-            </Link>
+            <Link href="/dashboard">Dashboard</Link>
         </li>
         <li>
-            <Link href="#">Pricing</Link>
-        </li>
+            {
+              session?.user &&  <Link href="/profile">Profile</Link>
+            }
+     </li>
     </>
 
     const authLinks = <>
@@ -80,7 +80,7 @@ export default function Navbar() {
                         </svg>
                     </button>
                     <div className="flex items-center gap-3">
-                        <p className="font-bold">ACME</p>
+                        <Link href="/" className="font-bold">ACME</Link>
                     </div>
                 </div>
                 <ul className="hidden items-center gap-4 md:flex">
