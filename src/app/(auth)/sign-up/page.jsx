@@ -25,8 +25,8 @@ const SignUpPage = () => {
       email: data.email,
       password: data.password,
     });
+    console.log('After sign up', resData, error);
 
-    console.log(resData, error);
   };
 
   const handleGoogleSignIn = async() => {
